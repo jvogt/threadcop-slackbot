@@ -1,0 +1,308 @@
+Last login: Wed Jan 30 12:36:16 on ttys000
+Unable to find any JVMs matching version "(null)".
+No Java runtime present, try --request to install.
+No identity found in the keychain.
+Jeffs-MacBook-Pro:~ jvogt$ cd Chef
+Jeffs-MacBook-Pro:Chef jvogt$ ls
+BJC
+Example Code
+HA DR chef.graffle
+HAB DEMO
+Jenkins Rally Workshop.graffle
+Notes
+Old Stuff
+Screen Shot 2018-08-14 at 10.30.04 AM.png
+app-modernize-demo
+automate-2-license-jvogt-expires-12-2019
+automate-and-chef-via-terraform
+az-roadshow
+chef-workstation-demo
+custom-resources-demo
+custom-win2016-with-hab-box
+good-demo-notes
+hab-for-hybrid.graffle
+habitat-demo
+ignite-azure-service-principal
+ignite-managed-azure-announcement.mov
+jenkins-workshop
+jvogt.jpg
+packer-plus-chef.graffle
+plans
+rust-learn
+sample-node-app
+sbux-poc
+simphony_vagrant
+technicolor-poc
+vpcsandbox
+webinar-habitat-pos (1)
+Jeffs-MacBook-Pro:Chef jvogt$ mkdir slackbot
+Jeffs-MacBook-Pro:Chef jvogt$ cd slackbot/
+Jeffs-MacBook-Pro:slackbot jvogt$ git clone git clone https://github.com/googlecodelabs/cloud-slack-bot.git example-cloud-slack-bot
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+Jeffs-MacBook-Pro:slackbot jvogt$ sudo xcode-select --reset
+Password:
+Jeffs-MacBook-Pro:slackbot jvogt$ git clone git clone https://github.com/googlecodelabs/cloud-slack-bot.git example-cloud-slack-bot
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+Jeffs-MacBook-Pro:slackbot jvogt$ xcode-select --reset
+xcode-select: error: --reset must be run as root (e.g. `sudo xcode-select --reset`).
+Jeffs-MacBook-Pro:slackbot jvogt$ sudo xcode-select --install
+xcode-select: note: install requested for command line developer tools
+Jeffs-MacBook-Pro:slackbot jvogt$ git clone git clone https://github.com/googlecodelabs/cloud-slack-bot.git example-cloud-slack-bot
+fatal: Too many arguments.
+
+usage: git clone [<options>] [--] <repo> [<dir>]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+    -n, --no-checkout     don't create a checkout
+    --bare                create a bare repository
+    --mirror              create a mirror repository (implies bare)
+    -l, --local           to clone from a local repository
+    --no-hardlinks        don't use local hardlinks, always copy
+    -s, --shared          setup as shared repository
+    --recurse-submodules[=<pathspec>]
+                          initialize submodules in the clone
+    -j, --jobs <n>        number of submodules cloned in parallel
+    --template <template-directory>
+                          directory from which templates will be used
+    --reference <repo>    reference repository
+    --reference-if-able <repo>
+                          reference repository
+    --dissociate          use --reference only while cloning
+    -o, --origin <name>   use <name> instead of 'origin' to track upstream
+    -b, --branch <branch>
+                          checkout <branch> instead of the remote's HEAD
+    -u, --upload-pack <path>
+                          path to git-upload-pack on the remote
+    --depth <depth>       create a shallow clone of that depth
+    --shallow-since <time>
+                          create a shallow clone since a specific time
+    --shallow-exclude <revision>
+                          deepen history of shallow clone, excluding rev
+    --single-branch       clone only one branch, HEAD or --branch
+    --no-tags             don't clone any tags, and make later fetches not to follow them
+    --shallow-submodules  any cloned submodules will be shallow
+    --separate-git-dir <gitdir>
+                          separate git dir from working tree
+    -c, --config <key=value>
+                          set config inside the new repository
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+    --filter <args>       object filtering
+
+Jeffs-MacBook-Pro:slackbot jvogt$ git clone https://github.com/googlecodelabs/cloud-slack-bot.git example-cloud-slack-bot
+Cloning into 'example-cloud-slack-bot'...
+remote: Enumerating objects: 17, done.
+remote: Counting objects: 100% (17/17), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 94 (delta 7), reused 12 (delta 5), pack-reused 77
+Unpacking objects: 100% (94/94), done.
+Jeffs-MacBook-Pro:slackbot jvogt$ subl example-cloud-slack-bot/
+Jeffs-MacBook-Pro:slackbot jvogt$ ./ngrok authtoken 3H9RLeWjfpH8RC4e5mGpo_2eQNNEY26M3U1q3RxjfJd
+-bash: ./ngrok: No such file or directory
+Jeffs-MacBook-Pro:slackbot jvogt$
+Jeffs-MacBook-Pro:slackbot jvogt$ ./ngrok authtoken 3H9RLeWjfpH8RC4e5mGpo_2eQNNEY26M3U1q3RxjfJd
+-bash: ./ngrok: No such file or directory
+Jeffs-MacBook-Pro:slackbot jvogt$ ngrok authtoken 3H9RLeWjfpH8RC4e5mGpo_2eQNNEY26M3U1q3RxjfJd
+Authtoken saved to configuration file: /Users/jvogt/.ngrok2/ngrok.yml
+Jeffs-MacBook-Pro:slackbot jvogt$ ls
+example-cloud-slack-bot
+Jeffs-MacBook-Pro:slackbot jvogt$ cd example-cloud-slack-bot/
+Jeffs-MacBook-Pro:example-cloud-slack-bot jvogt$ ls
+CONTRIBUTING.md   package.json      step-2-docker     test
+LICENSE           start             step-3-kubernetes
+README.md         step-1-token-file step-4-update
+Jeffs-MacBook-Pro:example-cloud-slack-bot jvogt$ cd ste
+step-1-token-file/ step-2-docker/     step-3-kubernetes/ step-4-update/
+Jeffs-MacBook-Pro:example-cloud-slack-bot jvogt$ cd step-1-token-file/
+Jeffs-MacBook-Pro:step-1-token-file jvogt$ slack_token_path=./slack-token node kittenbot.js
+internal/modules/cjs/loader.js:613
+    throw err;
+    ^
+
+Error: Cannot find module 'botkit'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:611:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:537:25)
+    at Module.require (internal/modules/cjs/loader.js:665:17)
+    at require (internal/modules/cjs/helpers.js:20:18)
+    at Object.<anonymous> (/Users/jvogt/Google Drive/Glitter/Chef/slackbot/example-cloud-slack-bot/step-1-token-file/kittenbot.js:20:14)
+    at Module._compile (internal/modules/cjs/loader.js:736:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:747:10)
+    at Module.load (internal/modules/cjs/loader.js:628:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:568:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:560:3)
+Jeffs-MacBook-Pro:step-1-token-file jvogt$ npm install
+npm notice created a lockfile as package-lock.json. You should commit this file.
+added 361 packages from 332 contributors and audited 7097 packages in 11.147s
+found 0 vulnerabilities
+
+Jeffs-MacBook-Pro:step-1-token-file jvogt$ slack_token_path=./slack-token node kittenbot.js
+Initializing Botkit v0.7.0
+info: ** No persistent storage method specified! Data may be lost when process shuts down.
+
+****************************************************************************************
+* WARNING: Your bot is operating without recommended security mechanisms in place.     *
+* Initialize your Botkit controller with a clientSigningSecret paramter to enable      *
+* verification that all incoming webhooks originate with Slack:                        *
+*                                                                                      *
+* var controller = new Botkit.slackbot({clientSigningSecret: <my secret from slack>}); *
+*                                                                                      *
+****************************************************************************************
+>> Botkit docs: https://botkit.ai/docs/readme-slack.html#securing-outgoing-webhooks-and-slash-commands
+>> Slack docs: https://api.slack.com/docs/verifying-requests-from-slack
+
+notice: ** BOT ID: threadcop ...attempting to connect to RTM!
+notice: RTM websocket opened
+error: Error: Stale RTM connection, closing RTM
+^C
+Jeffs-MacBook-Pro:step-1-token-file jvogt$ slack_token_path=./slack-token node kittenbot.js
+Initializing Botkit v0.7.0
+info: ** No persistent storage method specified! Data may be lost when process shuts down.
+
+****************************************************************************************
+* WARNING: Your bot is operating without recommended security mechanisms in place.     *
+* Initialize your Botkit controller with a clientSigningSecret paramter to enable      *
+* verification that all incoming webhooks originate with Slack:                        *
+*                                                                                      *
+* var controller = new Botkit.slackbot({clientSigningSecret: <my secret from slack>}); *
+*                                                                                      *
+****************************************************************************************
+>> Botkit docs: https://botkit.ai/docs/readme-slack.html#securing-outgoing-webhooks-and-slash-commands
+>> Slack docs: https://api.slack.com/docs/verifying-requests-from-slack
+
+notice: ** BOT ID: threadcop ...attempting to connect to RTM!
+notice: RTM websocket opened
+^C
+Jeffs-MacBook-Pro:step-1-token-file jvogt$ slack_token_path=./slack-token node kittenbot.js
+Initializing Botkit v0.7.0
+info: ** No persistent storage method specified! Data may be lost when process shuts down.
+
+****************************************************************************************
+* WARNING: Your bot is operating without recommended security mechanisms in place.     *
+* Initialize your Botkit controller with a clientSigningSecret paramter to enable      *
+* verification that all incoming webhooks originate with Slack:                        *
+*                                                                                      *
+* var controller = new Botkit.slackbot({clientSigningSecret: <my secret from slack>}); *
+*                                                                                      *
+****************************************************************************************
+>> Botkit docs: https://botkit.ai/docs/readme-slack.html#securing-outgoing-webhooks-and-slash-commands
+>> Slack docs: https://api.slack.com/docs/verifying-requests-from-slack
+
+notice: ** BOT ID: threadcop ...attempting to connect to RTM!
+notice: RTM websocket opened
+^C
+Jeffs-MacBook-Pro:step-1-token-file jvogt$ slack_token_path=./slack-token node kittenbot.js
+Initializing Botkit v0.7.0
+info: ** No persistent storage method specified! Data may be lost when process shuts down.
+
+****************************************************************************************
+* WARNING: Your bot is operating without recommended security mechanisms in place.     *
+* Initialize your Botkit controller with a clientSigningSecret paramter to enable      *
+* verification that all incoming webhooks originate with Slack:                        *
+*                                                                                      *
+* var controller = new Botkit.slackbot({clientSigningSecret: <my secret from slack>}); *
+*                                                                                      *
+****************************************************************************************
+>> Botkit docs: https://botkit.ai/docs/readme-slack.html#securing-outgoing-webhooks-and-slash-commands
+>> Slack docs: https://api.slack.com/docs/verifying-requests-from-slack
+
+notice: ** BOT ID: threadcop ...attempting to connect to RTM!
+notice: RTM websocket opened
+^C
+Jeffs-MacBook-Pro:step-1-token-file jvogt$ slack_token_path=./slack-token node kittenbot.js
+Initializing Botkit v0.7.0
+info: ** No persistent storage method specified! Data may be lost when process shuts down.
+
+****************************************************************************************
+* WARNING: Your bot is operating without recommended security mechanisms in place.     *
+* Initialize your Botkit controller with a clientSigningSecret paramter to enable      *
+* verification that all incoming webhooks originate with Slack:                        *
+*                                                                                      *
+* var controller = new Botkit.slackbot({clientSigningSecret: <my secret from slack>}); *
+*                                                                                      *
+****************************************************************************************
+>> Botkit docs: https://botkit.ai/docs/readme-slack.html#securing-outgoing-webhooks-and-slash-commands
+>> Slack docs: https://api.slack.com/docs/verifying-requests-from-slack
+
+notice: ** BOT ID: threadcop ...attempting to connect to RTM!
+notice: RTM websocket opened
+{ type: 'hello' }
+{ type: 'user_typing', channel: 'DFT4K95L1', user: 'UFT0HQ9R6' }
+{ type: 'user_typing', channel: 'DFT4K95L1', user: 'UFT0HQ9R6' }
+{ type: 'channel_joined',
+  channel:
+   { id: 'CFT0HQVSL',
+     name: 'dev-test',
+     is_channel: true,
+     is_group: false,
+     is_im: false,
+     created: 1548881224,
+     is_archived: false,
+     is_general: false,
+     unlinked: 0,
+     name_normalized: 'dev-test',
+     is_shared: false,
+     parent_conversation: null,
+     creator: 'UFT0HQ9R6',
+     is_ext_shared: false,
+     is_org_shared: false,
+     shared_team_ids: [ 'TFT0HQ8TA' ],
+     pending_shared: [],
+     is_pending_ext_shared: false,
+     is_member: true,
+     is_private: false,
+     is_mpim: false,
+     last_read: '1548881224.000200',
+     latest:
+      { user: 'UFT0HQ9R6',
+        type: 'message',
+        subtype: 'channel_join',
+        ts: '1548881224.000200',
+        text: '<@UFT0HQ9R6> has joined the channel' },
+     unread_count: 0,
+     unread_count_display: 0,
+     members: [ 'UFT0HQ9R6', 'UFT0M3S3A' ],
+     topic: { value: '', creator: '', last_set: 0 },
+     purpose: { value: '', creator: '', last_set: 0 },
+     previous_names: [],
+     priority: 0 } }
+{ type: 'member_joined_channel',
+  user: 'UFT0M3S3A',
+  channel: 'CFT0HQVSL',
+  channel_type: 'C',
+  team: 'TFT0HQ8TA',
+  inviter: 'UFT0HQ9R6',
+  event_ts: '1548968644.000100',
+  ts: '1548968644.000100' }
+{ user: 'UFT0M3S3A',
+  inviter: 'UFT0HQ9R6',
+  user_profile:
+   { avatar_hash: 'geb7fd4ab99e',
+     image_72:
+      'https://secure.gravatar.com/avatar/eb7fd4ab99ef7b835ed42fdff3a82899.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2F00b63%2Fimg%2Favatars%2Fava_0024-72.png',
+     first_name: '',
+     real_name: 'threadcop',
+     display_name: '',
+     team: 'TFT0HQ8TA',
+     name: 'threadcop',
+     is_restricted: false,
+     is_ultra_restricted: false },
+  type: 'message',
+  subtype: 'channel_join',
+  team: 'TFT0HQ8TA',
+  text: '<@UFT0M3S3A> has joined the channel',
+  channel: 'CFT0HQVSL',
+  event_ts: '1548968644.000200',
+  ts: '1548968644.000200' }
+{ type: 'user_typing', channel: 'CFT0HQVSL', user: 'UFT0HQ9R6' }
+{ type: 'user_typing', channel: 'CFT0HQVSL', user: 'UFT0HQ9R6' }
+{ type: 'user_typing', channel: 'CFT0HQVSL', user: 'UFT0HQ9R6' }
+{ type: 'message',
+  user: 'UFT0HQ9R6',
+  text: 'asdf',
+  client_msg_id: '8caa9a99-27ca-4c78-9b90-e737b7df6c2b',
+  team: 'TFT0HQ8TA',
+  channel: 'CFT0HQVSL',
+  event_ts: '1548968676.000600',
+  ts: '1548968676.000600' }

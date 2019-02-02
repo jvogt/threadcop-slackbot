@@ -1,0 +1,19 @@
+{
+  "name": "threadcop-slackbot",
+  "version": "1.0.0",
+  "description": "Threadcop annoys the nonbelievers.",
+  "main": "threadcop.js",
+  "dependencies": {
+    "botkit": "0.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jvogt/threadcop-slackbot.git"
+  },
+  "author": "Jeff Vogt",
+  "license": "Apache-2.0"
+}
